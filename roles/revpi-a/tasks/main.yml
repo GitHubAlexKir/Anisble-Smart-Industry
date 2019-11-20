@@ -1,0 +1,31 @@
+---
+
+- name: copy OPCUAServerSecured python script
+  become: yes
+  copy:
+    src: templates/OPCUAServerSecured.py
+    dest: "/var/lib/revpipyload/industry/OPCUAServerSecured.py"
+
+- name: copy certificate
+  become: yes
+  copy:
+    src: templates/cert.der
+    dest: "/var/lib/revpipyload/industry/cert.der"
+
+- name: copy private key
+  become: yes
+  copy:
+    src: templates/private.pem
+    dest: "/var/lib/revpipyload/industry/private.pem"
+
+- name: copy state python script
+  become: yes
+  copy:
+    src: templates/state.py
+    dest: "/var/lib/revpipyload/industry/state.py"
+
+- name: copy  trafic_light python script
+  become: yes
+  copy:
+    src: templates/trafic_light.py
+    dest: "/var/lib/revpipyload/industry/trafic_light.py"

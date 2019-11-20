@@ -1,0 +1,7 @@
+---
+
+- hosts: revpi-a
+  tasks:
+  - import_role:
+     name: revpi-a
+

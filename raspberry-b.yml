@@ -1,0 +1,7 @@
+---
+
+- hosts: raspberry-b
+  tasks:
+  - import_role:
+     name: raspberry-b
+
