@@ -1,0 +1,14 @@
+---
+
+- name: Compress directory /path/to/foo/ into /path/to/foo.tgz
+  become: yes
+  archive:
+    path: /var/lib/revpipyload/industry
+    dest: /var/lib/revpipyload/industry-backup-{{ansible_date_time.date}}.tgz
+
+- name: Store file into /tmp/fetched/host.example.com/tmp/somefile
+  become: yes
+  fetch:
+    src: /var/lib/revpipyload/industry-backup-{{ansible_date_time.date}}.tgz
+    dest: roles/revpi-a/templates/
+    flat: yes
