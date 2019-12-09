@@ -1,7 +1,0 @@
----
-
-- hosts: raspberry-a
-  tasks:
-  - import_role:
-     name: raspberry-a
-
